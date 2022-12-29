@@ -1,0 +1,20 @@
+{
+  "name": "bearandballoons_server",
+  "version": "1.0.0",
+  "description": "Bear&Balloons",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "server": "node index.js"
+  },
+  "keywords": [
+    "Bear&Balloons"
+  ],
+  "author": "Hunt's developments group",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20"
+  }
+}
