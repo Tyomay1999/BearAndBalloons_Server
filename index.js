@@ -3,6 +3,7 @@ const express = require("express")
 const app = express()
 const {ServiceUtils} = require("./Services/serviceUtils")
 const cors = require("cors")
+const path = require("path");
 const PORT = ServiceUtils.getPort()
 const HOST = ServiceUtils.getHost()
 
@@ -27,9 +28,9 @@ app.post('/user', (req,res) => {
     res.status(201).json({message: "success"})
     console.log("<------user_info",user_info,"<------user_info")
 })
-app.get('/', (req,res) => {
-    res.send("<h1>Bear&Balloons</h1>")
-})
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '/index.html'));
+});
 
 app.listen(PORT, () => {
     console.log(`Application started on URL ${HOST}:${PORT} 🎉`);
