@@ -2,10 +2,11 @@ require("dotenv").config()
 const express = require("express")
 const app = express()
 const {ServiceUtils} = require("./Services/serviceUtils")
-
+const cors = require("cors")
 const PORT = ServiceUtils.getPort()
 const HOST = ServiceUtils.getHost()
 
+app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
