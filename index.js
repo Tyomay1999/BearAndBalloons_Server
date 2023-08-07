@@ -82,9 +82,9 @@ app.get("/get_image", async (req, res) => {
 //         throw error
 //     }
 // } )
-// app.get( '/', ( req, res ) => {
-//     res.sendFile( path.join( __dirname, '/index.html' ) );
-// } );
+app.get( '/', ( req, res ) => {
+    res.sendFile( path.join( __dirname, '/index.html' ) );
+} );
 // app.post( "/hunter", async ( req, res ) => {
 //     const key = process.env.HUNTER_KEY
 //     try {
